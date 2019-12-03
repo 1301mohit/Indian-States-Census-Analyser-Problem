@@ -2,8 +2,8 @@ package com.statesCensusAnalyser;
 
 import com.opencsv.bean.CsvBindByName;
 
-public class CSVStates {
-//    SrNo,State,Name,TIN,StateCode,
+public class StateCode {
+
     @CsvBindByName
     private int SrNo;
 

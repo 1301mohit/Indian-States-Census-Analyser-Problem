@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-03T10:06:00" hostname="mohit-Inspiron-15-3567" time="0.169">
+  <properties/>
+  <testcase name="readFile_IfCSVHeaderIncorrect_ReturnException" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.169"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
