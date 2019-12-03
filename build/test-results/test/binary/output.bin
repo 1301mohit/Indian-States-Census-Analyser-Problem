@@ -1,58 +1,58 @@
-fStateCensus{State='Uttar Pradesh', Population='199812341', AreaInSqKm='240928', DensityPerSqKm='828'}
-cStateCensus{State='Maharashta', Population='112372972', AreaInSqKm='307713', DensityPerSqKm='365'}
 ^StateCensus{State='Bihar', Population='103804637', AreaInSqKm='94163', DensityPerSqKm='1102'}
 cStateCensus{State='West Bengal', Population='91347736', AreaInSqKm='88752', DensityPerSqKm='1029'}
-fStateCensus{State='Madhya Pradesh', Population='72597565', AreaInSqKm='308245', DensityPerSqKm='236'}
-bStateCensus{State='Tamil Nadu', Population='72138958', AreaInSqKm='130058', DensityPerSqKm='555'}
-aStateCensus{State='Rajasthan', Population='68621012', AreaInSqKm='342239', DensityPerSqKm='201'}
-aStateCensus{State='Karnataka', Population='61130704', AreaInSqKm='191791', DensityPerSqKm='319'}
-_StateCensus{State='Gujarat', Population='60383628', AreaInSqKm='196024', DensityPerSqKm='308'}
-fStateCensus{State='Andhra Pradesh', Population='49386799', AreaInSqKm='162968', DensityPerSqKm='303'}
-^StateCensus{State='Odisha', Population='41947358', AreaInSqKm='155707', DensityPerSqKm='269'}
-aStateCensus{State='Telangana', Population='35286757', AreaInSqKm='114840', DensityPerSqKm='307'}
 ]StateCensus{State='Kerala', Population='33387677', AreaInSqKm='38863', DensityPerSqKm='859'}
+fStateCensus{State='Uttar Pradesh', Population='199812341', AreaInSqKm='240928', DensityPerSqKm='828'}
+^StateCensus{State='Haryana', Population='25353081', AreaInSqKm='44212', DensityPerSqKm='573'}
+bStateCensus{State='Tamil Nadu', Population='72138958', AreaInSqKm='130058', DensityPerSqKm='555'}
+]StateCensus{State='Punjab', Population='27704236', AreaInSqKm='50362', DensityPerSqKm='550'}
 `StateCensus{State='Jharkhand', Population='32966238', AreaInSqKm='79714', DensityPerSqKm='414'}
 \StateCensus{State='Assam', Population='31169272', AreaInSqKm='78438', DensityPerSqKm='397'}
-]StateCensus{State='Punjab', Population='27704236', AreaInSqKm='50362', DensityPerSqKm='550'}
-cStateCensus{State='Chattisgarh', Population='25540196', AreaInSqKm='135191', DensityPerSqKm='189'}
-^StateCensus{State='Haryana', Population='25353081', AreaInSqKm='44212', DensityPerSqKm='573'}
-hStateCensus{State='Jammu and Kashmir', Population='12548926', AreaInSqKm='222236', DensityPerSqKm='57'}
-bStateCensus{State='Uttarakhand', Population='10116752', AreaInSqKm='53483', DensityPerSqKm='189'}
-fStateCensus{State='Himachal Pradesh', Population='6864602', AreaInSqKm='55673', DensityPerSqKm='123'}
+XStateCensus{State='Goa', Population='1457723', AreaInSqKm='3702', DensityPerSqKm='394'}
+cStateCensus{State='Maharashta', Population='112372972', AreaInSqKm='307713', DensityPerSqKm='365'}
 ]StateCensus{State='Tripura', Population='3671032', AreaInSqKm='10486', DensityPerSqKm='350'}
+aStateCensus{State='Karnataka', Population='61130704', AreaInSqKm='191791', DensityPerSqKm='319'}
+_StateCensus{State='Gujarat', Population='60383628', AreaInSqKm='196024', DensityPerSqKm='308'}
+aStateCensus{State='Telangana', Population='35286757', AreaInSqKm='114840', DensityPerSqKm='307'}
+fStateCensus{State='Andhra Pradesh', Population='49386799', AreaInSqKm='162968', DensityPerSqKm='303'}
+^StateCensus{State='Odisha', Population='41947358', AreaInSqKm='155707', DensityPerSqKm='269'}
+fStateCensus{State='Madhya Pradesh', Population='72597565', AreaInSqKm='308245', DensityPerSqKm='236'}
+aStateCensus{State='Rajasthan', Population='68621012', AreaInSqKm='342239', DensityPerSqKm='201'}
+cStateCensus{State='Chattisgarh', Population='25540196', AreaInSqKm='135191', DensityPerSqKm='189'}
+bStateCensus{State='Uttarakhand', Population='10116752', AreaInSqKm='53483', DensityPerSqKm='189'}
 _StateCensus{State='Meghalaya', Population='2964007', AreaInSqKm='22429', DensityPerSqKm='132'}
+fStateCensus{State='Himachal Pradesh', Population='6864602', AreaInSqKm='55673', DensityPerSqKm='123'}
 ]StateCensus{State='Manipur', Population='2721756', AreaInSqKm='22327', DensityPerSqKm='122'}
 ^StateCensus{State='Nagaland', Population='1980602', AreaInSqKm='16579', DensityPerSqKm='119'}
-XStateCensus{State='Goa', Population='1457723', AreaInSqKm='3702', DensityPerSqKm='394'}
-aStateCensus{State='Arunachal Pradesh', Population='1382611', AreaInSqKm='0', DensityPerSqKm='0'}
-\StateCensus{State='Mizoram', Population='1091014', AreaInSqKm='21081', DensityPerSqKm='52'}
 YStateCensus{State='Sikkim', Population='607688', AreaInSqKm='7096', DensityPerSqKm='86'}
-fStateCensus{State='Uttar Pradesh', Population='199812341', AreaInSqKm='240928', DensityPerSqKm='828'}
-cStateCensus{State='Maharashta', Population='112372972', AreaInSqKm='307713', DensityPerSqKm='365'}
+hStateCensus{State='Jammu and Kashmir', Population='12548926', AreaInSqKm='222236', DensityPerSqKm='57'}
+\StateCensus{State='Mizoram', Population='1091014', AreaInSqKm='21081', DensityPerSqKm='52'}
+aStateCensus{State='Arunachal Pradesh', Population='1382611', AreaInSqKm='0', DensityPerSqKm='0'}
 ^StateCensus{State='Bihar', Population='103804637', AreaInSqKm='94163', DensityPerSqKm='1102'}
 cStateCensus{State='West Bengal', Population='91347736', AreaInSqKm='88752', DensityPerSqKm='1029'}
-fStateCensus{State='Madhya Pradesh', Population='72597565', AreaInSqKm='308245', DensityPerSqKm='236'}
-bStateCensus{State='Tamil Nadu', Population='72138958', AreaInSqKm='130058', DensityPerSqKm='555'}
-aStateCensus{State='Rajasthan', Population='68621012', AreaInSqKm='342239', DensityPerSqKm='201'}
-aStateCensus{State='Karnataka', Population='61130704', AreaInSqKm='191791', DensityPerSqKm='319'}
-_StateCensus{State='Gujarat', Population='60383628', AreaInSqKm='196024', DensityPerSqKm='308'}
-fStateCensus{State='Andhra Pradesh', Population='49386799', AreaInSqKm='162968', DensityPerSqKm='303'}
-^StateCensus{State='Odisha', Population='41947358', AreaInSqKm='155707', DensityPerSqKm='269'}
-aStateCensus{State='Telangana', Population='35286757', AreaInSqKm='114840', DensityPerSqKm='307'}
 ]StateCensus{State='Kerala', Population='33387677', AreaInSqKm='38863', DensityPerSqKm='859'}
+fStateCensus{State='Uttar Pradesh', Population='199812341', AreaInSqKm='240928', DensityPerSqKm='828'}
+^StateCensus{State='Haryana', Population='25353081', AreaInSqKm='44212', DensityPerSqKm='573'}
+bStateCensus{State='Tamil Nadu', Population='72138958', AreaInSqKm='130058', DensityPerSqKm='555'}
+]StateCensus{State='Punjab', Population='27704236', AreaInSqKm='50362', DensityPerSqKm='550'}
 `StateCensus{State='Jharkhand', Population='32966238', AreaInSqKm='79714', DensityPerSqKm='414'}
 \StateCensus{State='Assam', Population='31169272', AreaInSqKm='78438', DensityPerSqKm='397'}
-]StateCensus{State='Punjab', Population='27704236', AreaInSqKm='50362', DensityPerSqKm='550'}
-cStateCensus{State='Chattisgarh', Population='25540196', AreaInSqKm='135191', DensityPerSqKm='189'}
-^StateCensus{State='Haryana', Population='25353081', AreaInSqKm='44212', DensityPerSqKm='573'}
-hStateCensus{State='Jammu and Kashmir', Population='12548926', AreaInSqKm='222236', DensityPerSqKm='57'}
-bStateCensus{State='Uttarakhand', Population='10116752', AreaInSqKm='53483', DensityPerSqKm='189'}
-fStateCensus{State='Himachal Pradesh', Population='6864602', AreaInSqKm='55673', DensityPerSqKm='123'}
+XStateCensus{State='Goa', Population='1457723', AreaInSqKm='3702', DensityPerSqKm='394'}
+cStateCensus{State='Maharashta', Population='112372972', AreaInSqKm='307713', DensityPerSqKm='365'}
 ]StateCensus{State='Tripura', Population='3671032', AreaInSqKm='10486', DensityPerSqKm='350'}
+aStateCensus{State='Karnataka', Population='61130704', AreaInSqKm='191791', DensityPerSqKm='319'}
+_StateCensus{State='Gujarat', Population='60383628', AreaInSqKm='196024', DensityPerSqKm='308'}
+aStateCensus{State='Telangana', Population='35286757', AreaInSqKm='114840', DensityPerSqKm='307'}
+fStateCensus{State='Andhra Pradesh', Population='49386799', AreaInSqKm='162968', DensityPerSqKm='303'}
+^StateCensus{State='Odisha', Population='41947358', AreaInSqKm='155707', DensityPerSqKm='269'}
+fStateCensus{State='Madhya Pradesh', Population='72597565', AreaInSqKm='308245', DensityPerSqKm='236'}
+aStateCensus{State='Rajasthan', Population='68621012', AreaInSqKm='342239', DensityPerSqKm='201'}
+cStateCensus{State='Chattisgarh', Population='25540196', AreaInSqKm='135191', DensityPerSqKm='189'}
+bStateCensus{State='Uttarakhand', Population='10116752', AreaInSqKm='53483', DensityPerSqKm='189'}
 _StateCensus{State='Meghalaya', Population='2964007', AreaInSqKm='22429', DensityPerSqKm='132'}
+fStateCensus{State='Himachal Pradesh', Population='6864602', AreaInSqKm='55673', DensityPerSqKm='123'}
 ]StateCensus{State='Manipur', Population='2721756', AreaInSqKm='22327', DensityPerSqKm='122'}
 ^StateCensus{State='Nagaland', Population='1980602', AreaInSqKm='16579', DensityPerSqKm='119'}
-XStateCensus{State='Goa', Population='1457723', AreaInSqKm='3702', DensityPerSqKm='394'}
-aStateCensus{State='Arunachal Pradesh', Population='1382611', AreaInSqKm='0', DensityPerSqKm='0'}
-\StateCensus{State='Mizoram', Population='1091014', AreaInSqKm='21081', DensityPerSqKm='52'}
 YStateCensus{State='Sikkim', Population='607688', AreaInSqKm='7096', DensityPerSqKm='86'}
+hStateCensus{State='Jammu and Kashmir', Population='12548926', AreaInSqKm='222236', DensityPerSqKm='57'}
+\StateCensus{State='Mizoram', Population='1091014', AreaInSqKm='21081', DensityPerSqKm='52'}
+aStateCensus{State='Arunachal Pradesh', Population='1382611', AreaInSqKm='0', DensityPerSqKm='0'}

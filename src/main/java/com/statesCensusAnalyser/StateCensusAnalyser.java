@@ -20,7 +20,11 @@ public class StateCensusAnalyser {
 
     public static String readCsv(String stateCensusData, Class className) throws StateCensusAnalyserException {
         List stateCensusLists = builder(stateCensusData, className);
-        sortByPopulation(stateCensusLists);
+        sortByPopulationDensity(stateCensusLists);
+        for (Object obj: stateCensusLists
+        ) {
+            System.out.println(obj);
+        }
         Gson gson = new Gson();
         String json = gson.toJson(stateCensusLists);
         try {
@@ -35,6 +39,11 @@ public class StateCensusAnalyser {
             return "HAPPY";
         else
             return "SAD";
+    }
+
+    private static void sortByPopulationDensity(List stateCensusLists) {
+        Comparator<StateCensus> c = (s2,s1) -> (Integer.parseInt(s1.getDensityPerSqKm().trim())) - (Integer.parseInt(s2.getDensityPerSqKm().trim()));
+        stateCensusLists.sort(c);
     }
 
     private static <T> List<T> builder(String stateCensusData, T className) throws StateCensusAnalyserException {
@@ -58,9 +67,5 @@ public class StateCensusAnalyser {
     private static void sortByPopulation(List stateCensusLists) {
         Comparator<StateCensus> c = (s2,s1) -> (Integer.parseInt(s1.getPopulation().trim())) - (Integer.parseInt(s2.getPopulation().trim()));
         stateCensusLists.sort(c);
-        for (Object obj: stateCensusLists
-        ) {
-            System.out.println(obj);
-        }
     }
 }
