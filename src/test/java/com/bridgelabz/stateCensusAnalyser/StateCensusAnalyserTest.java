@@ -58,6 +58,5 @@ public class StateCensusAnalyserTest {
         } catch (StateCensusAnalyserException e) {
             Assert.assertEquals(StateCensusAnalyserException.ExceptionType.NO_SUCH_FILE, e.type);
         }
-
     }
 }

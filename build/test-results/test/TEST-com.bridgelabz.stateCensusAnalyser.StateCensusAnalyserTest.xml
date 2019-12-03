@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-03T10:06:00" hostname="mohit-Inspiron-15-3567" time="0.169">
+<testsuite name="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-12-03T10:34:59" hostname="mohit-Inspiron-15-3567" time="0.245">
   <properties/>
-  <testcase name="readFile_IfCSVHeaderIncorrect_ReturnException" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.169"/>
+  <testcase name="readFile_IfCorrect_ReturnHappy" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.136"/>
+  <testcase name="readFile_IfDelimiterIncorrect_ReturnException" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.038"/>
+  <testcase name="readFile_IfCSVHeaderIncorrect_ReturnException" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.037"/>
+  <testcase name="readFile_IfFileNameIncorrect_ReturnException" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.031"/>
+  <testcase name="readFile_IfFileTypeIncorrect_ReturnException" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
