@@ -20,7 +20,7 @@ public class StateCensusAnalyser {
 
     public static String readCsv(String stateCensusData, Class className) throws StateCensusAnalyserException {
         List stateCensusLists = builder(stateCensusData, className);
-        sortByPopulationDensity(stateCensusLists);
+        sortByArea(stateCensusLists);
         for (Object obj: stateCensusLists
         ) {
             System.out.println(obj);
@@ -39,6 +39,11 @@ public class StateCensusAnalyser {
             return "HAPPY";
         else
             return "SAD";
+    }
+
+    private static void sortByArea(List stateCensusLists) {
+        Comparator<StateCensus> c = (s2,s1) -> (Integer.parseInt((s1.getAreaInSqKm().trim()))) - (Integer.parseInt(s2.getAreaInSqKm().trim()));
+        stateCensusLists.sort(c);
     }
 
     private static void sortByPopulationDensity(List stateCensusLists) {

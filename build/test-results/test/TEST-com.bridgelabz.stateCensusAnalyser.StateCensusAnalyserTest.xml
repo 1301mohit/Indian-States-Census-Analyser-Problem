@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" tests="5" skipped="0" failures="2" errors="0" timestamp="2019-12-03T14:19:22" hostname="mohit-Inspiron-15-3567" time="0.341">
+<testsuite name="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" tests="5" skipped="0" failures="1" errors="0" timestamp="2019-12-03T14:28:30" hostname="mohit-Inspiron-15-3567" time="0.363">
   <properties/>
-  <testcase name="readFile_IfCorrect_ReturnHappy" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.225"/>
+  <testcase name="readFile_IfCorrect_ReturnHappy" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.263"/>
   <testcase name="readFile_IfDelimiterIncorrect_ReturnException" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.036">
     <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
-	at com.statesCensusAnalyser.StateCensusAnalyser.lambda$sortByPopulationDensity$0(StateCensusAnalyser.java:45)
-	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
-	at java.util.TimSort.sort(TimSort.java:220)
+	at com.statesCensusAnalyser.StateCensusAnalyser.lambda$sortByArea$0(StateCensusAnalyser.java:45)
+	at java.util.TimSort.binarySort(TimSort.java:296)
+	at java.util.TimSort.sort(TimSort.java:221)
 	at java.util.Arrays.sort(Arrays.java:1512)
 	at java.util.ArrayList.sort(ArrayList.java:1462)
-	at com.statesCensusAnalyser.StateCensusAnalyser.sortByPopulationDensity(StateCensusAnalyser.java:46)
+	at com.statesCensusAnalyser.StateCensusAnalyser.sortByArea(StateCensusAnalyser.java:46)
 	at com.statesCensusAnalyser.StateCensusAnalyser.readCsv(StateCensusAnalyser.java:23)
 	at com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest.readFile_IfDelimiterIncorrect_ReturnException(StateCensusAnalyserTest.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -61,124 +61,95 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="readFile_IfCSVHeaderIncorrect_ReturnException" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.036">
-    <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
-	at com.statesCensusAnalyser.StateCensusAnalyser.lambda$sortByPopulationDensity$0(StateCensusAnalyser.java:45)
-	at java.util.TimSort.binarySort(TimSort.java:296)
-	at java.util.TimSort.sort(TimSort.java:221)
-	at java.util.Arrays.sort(Arrays.java:1512)
-	at java.util.ArrayList.sort(ArrayList.java:1462)
-	at com.statesCensusAnalyser.StateCensusAnalyser.sortByPopulationDensity(StateCensusAnalyser.java:46)
-	at com.statesCensusAnalyser.StateCensusAnalyser.readCsv(StateCensusAnalyser.java:23)
-	at com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest.readFile_IfCSVHeaderIncorrect_ReturnException(StateCensusAnalyserTest.java:60)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-</failure>
-  </testcase>
-  <testcase name="readFile_IfFileNameIncorrect_ReturnException" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.043"/>
-  <testcase name="readFile_IfFileTypeIncorrect_ReturnException" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.0"/>
-  <system-out><![CDATA[StateCensus{State='Bihar', Population='103804637', AreaInSqKm='94163', DensityPerSqKm='1102'}
-StateCensus{State='West Bengal', Population='91347736', AreaInSqKm='88752', DensityPerSqKm='1029'}
-StateCensus{State='Kerala', Population='33387677', AreaInSqKm='38863', DensityPerSqKm='859'}
-StateCensus{State='Uttar Pradesh', Population='199812341', AreaInSqKm='240928', DensityPerSqKm='828'}
-StateCensus{State='Haryana', Population='25353081', AreaInSqKm='44212', DensityPerSqKm='573'}
-StateCensus{State='Tamil Nadu', Population='72138958', AreaInSqKm='130058', DensityPerSqKm='555'}
-StateCensus{State='Punjab', Population='27704236', AreaInSqKm='50362', DensityPerSqKm='550'}
-StateCensus{State='Jharkhand', Population='32966238', AreaInSqKm='79714', DensityPerSqKm='414'}
-StateCensus{State='Assam', Population='31169272', AreaInSqKm='78438', DensityPerSqKm='397'}
-StateCensus{State='Goa', Population='1457723', AreaInSqKm='3702', DensityPerSqKm='394'}
+  <testcase name="readFile_IfCSVHeaderIncorrect_ReturnException" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.032"/>
+  <testcase name="readFile_IfFileNameIncorrect_ReturnException" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.028"/>
+  <testcase name="readFile_IfFileTypeIncorrect_ReturnException" classname="com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest" time="0.001"/>
+  <system-out><![CDATA[StateCensus{State='Rajasthan', Population='68621012', AreaInSqKm='342239', DensityPerSqKm='201'}
+StateCensus{State='Madhya Pradesh', Population='72597565', AreaInSqKm='308245', DensityPerSqKm='236'}
 StateCensus{State='Maharashta', Population='112372972', AreaInSqKm='307713', DensityPerSqKm='365'}
-StateCensus{State='Tripura', Population='3671032', AreaInSqKm='10486', DensityPerSqKm='350'}
-StateCensus{State='Karnataka', Population='61130704', AreaInSqKm='191791', DensityPerSqKm='319'}
+StateCensus{State='Uttar Pradesh', Population='199812341', AreaInSqKm='240928', DensityPerSqKm='828'}
+StateCensus{State='Jammu and Kashmir', Population='12548926', AreaInSqKm='222236', DensityPerSqKm='57'}
 StateCensus{State='Gujarat', Population='60383628', AreaInSqKm='196024', DensityPerSqKm='308'}
-StateCensus{State='Telangana', Population='35286757', AreaInSqKm='114840', DensityPerSqKm='307'}
+StateCensus{State='Karnataka', Population='61130704', AreaInSqKm='191791', DensityPerSqKm='319'}
 StateCensus{State='Andhra Pradesh', Population='49386799', AreaInSqKm='162968', DensityPerSqKm='303'}
 StateCensus{State='Odisha', Population='41947358', AreaInSqKm='155707', DensityPerSqKm='269'}
-StateCensus{State='Madhya Pradesh', Population='72597565', AreaInSqKm='308245', DensityPerSqKm='236'}
-StateCensus{State='Rajasthan', Population='68621012', AreaInSqKm='342239', DensityPerSqKm='201'}
 StateCensus{State='Chattisgarh', Population='25540196', AreaInSqKm='135191', DensityPerSqKm='189'}
-StateCensus{State='Uttarakhand', Population='10116752', AreaInSqKm='53483', DensityPerSqKm='189'}
-StateCensus{State='Meghalaya', Population='2964007', AreaInSqKm='22429', DensityPerSqKm='132'}
-StateCensus{State='Himachal Pradesh', Population='6864602', AreaInSqKm='55673', DensityPerSqKm='123'}
-StateCensus{State='Manipur', Population='2721756', AreaInSqKm='22327', DensityPerSqKm='122'}
-StateCensus{State='Nagaland', Population='1980602', AreaInSqKm='16579', DensityPerSqKm='119'}
-StateCensus{State='Sikkim', Population='607688', AreaInSqKm='7096', DensityPerSqKm='86'}
-StateCensus{State='Jammu and Kashmir', Population='12548926', AreaInSqKm='222236', DensityPerSqKm='57'}
-StateCensus{State='Mizoram', Population='1091014', AreaInSqKm='21081', DensityPerSqKm='52'}
-StateCensus{State='Arunachal Pradesh', Population='1382611', AreaInSqKm='0', DensityPerSqKm='0'}
+StateCensus{State='Tamil Nadu', Population='72138958', AreaInSqKm='130058', DensityPerSqKm='555'}
+StateCensus{State='Telangana', Population='35286757', AreaInSqKm='114840', DensityPerSqKm='307'}
 StateCensus{State='Bihar', Population='103804637', AreaInSqKm='94163', DensityPerSqKm='1102'}
 StateCensus{State='West Bengal', Population='91347736', AreaInSqKm='88752', DensityPerSqKm='1029'}
-StateCensus{State='Kerala', Population='33387677', AreaInSqKm='38863', DensityPerSqKm='859'}
-StateCensus{State='Uttar Pradesh', Population='199812341', AreaInSqKm='240928', DensityPerSqKm='828'}
-StateCensus{State='Haryana', Population='25353081', AreaInSqKm='44212', DensityPerSqKm='573'}
-StateCensus{State='Tamil Nadu', Population='72138958', AreaInSqKm='130058', DensityPerSqKm='555'}
-StateCensus{State='Punjab', Population='27704236', AreaInSqKm='50362', DensityPerSqKm='550'}
 StateCensus{State='Jharkhand', Population='32966238', AreaInSqKm='79714', DensityPerSqKm='414'}
 StateCensus{State='Assam', Population='31169272', AreaInSqKm='78438', DensityPerSqKm='397'}
-StateCensus{State='Goa', Population='1457723', AreaInSqKm='3702', DensityPerSqKm='394'}
-StateCensus{State='Maharashta', Population='112372972', AreaInSqKm='307713', DensityPerSqKm='365'}
+StateCensus{State='Himachal Pradesh', Population='6864602', AreaInSqKm='55673', DensityPerSqKm='123'}
+StateCensus{State='Uttarakhand', Population='10116752', AreaInSqKm='53483', DensityPerSqKm='189'}
+StateCensus{State='Punjab', Population='27704236', AreaInSqKm='50362', DensityPerSqKm='550'}
+StateCensus{State='Haryana', Population='25353081', AreaInSqKm='44212', DensityPerSqKm='573'}
+StateCensus{State='Kerala', Population='33387677', AreaInSqKm='38863', DensityPerSqKm='859'}
+StateCensus{State='Meghalaya', Population='2964007', AreaInSqKm='22429', DensityPerSqKm='132'}
+StateCensus{State='Manipur', Population='2721756', AreaInSqKm='22327', DensityPerSqKm='122'}
+StateCensus{State='Mizoram', Population='1091014', AreaInSqKm='21081', DensityPerSqKm='52'}
+StateCensus{State='Nagaland', Population='1980602', AreaInSqKm='16579', DensityPerSqKm='119'}
 StateCensus{State='Tripura', Population='3671032', AreaInSqKm='10486', DensityPerSqKm='350'}
-StateCensus{State='Karnataka', Population='61130704', AreaInSqKm='191791', DensityPerSqKm='319'}
+StateCensus{State='Sikkim', Population='607688', AreaInSqKm='7096', DensityPerSqKm='86'}
+StateCensus{State='Goa', Population='1457723', AreaInSqKm='3702', DensityPerSqKm='394'}
+StateCensus{State='Arunachal Pradesh', Population='1382611', AreaInSqKm='0', DensityPerSqKm='0'}
+StateCensus{State='Uttar Pradesh', Population='null', AreaInSqKm='199812341', DensityPerSqKm='240928'}
+StateCensus{State='Maharashta', Population='null', AreaInSqKm='112372972', DensityPerSqKm='307713'}
+StateCensus{State='Bihar', Population='null', AreaInSqKm='103804637', DensityPerSqKm='94163'}
+StateCensus{State='West Bengal', Population='null', AreaInSqKm='91347736', DensityPerSqKm='88752'}
+StateCensus{State='Madhya Pradesh', Population='null', AreaInSqKm='72597565', DensityPerSqKm='308245'}
+StateCensus{State='Tamil Nadu', Population='null', AreaInSqKm='72138958', DensityPerSqKm='130058'}
+StateCensus{State='Rajasthan', Population='null', AreaInSqKm='68621012', DensityPerSqKm='342239'}
+StateCensus{State='Karnataka', Population='null', AreaInSqKm='61130704', DensityPerSqKm='191791'}
+StateCensus{State='Gujarat', Population='null', AreaInSqKm='60383628', DensityPerSqKm='196024'}
+StateCensus{State='Andhra Pradesh', Population='null', AreaInSqKm='49386799', DensityPerSqKm='162968'}
+StateCensus{State='Odisha', Population='null', AreaInSqKm='41947358', DensityPerSqKm='155707'}
+StateCensus{State='Telangana', Population='null', AreaInSqKm='35286757', DensityPerSqKm='114840'}
+StateCensus{State='Kerala', Population='null', AreaInSqKm='33387677', DensityPerSqKm='38863'}
+StateCensus{State='Jharkhand', Population='null', AreaInSqKm='32966238', DensityPerSqKm='79714'}
+StateCensus{State='Assam', Population='null', AreaInSqKm='31169272', DensityPerSqKm='78438'}
+StateCensus{State='Punjab', Population='null', AreaInSqKm='27704236', DensityPerSqKm='50362'}
+StateCensus{State='Chattisgarh', Population='null', AreaInSqKm='25540196', DensityPerSqKm='135191'}
+StateCensus{State='Haryana', Population='null', AreaInSqKm='25353081', DensityPerSqKm='44212'}
+StateCensus{State='Jammu and Kashmir', Population='null', AreaInSqKm='12548926', DensityPerSqKm='222236'}
+StateCensus{State='Uttarakhand', Population='null', AreaInSqKm='10116752', DensityPerSqKm='53483'}
+StateCensus{State='Himachal Pradesh', Population='null', AreaInSqKm='6864602', DensityPerSqKm='55673'}
+StateCensus{State='Tripura', Population='null', AreaInSqKm='3671032', DensityPerSqKm='10486'}
+StateCensus{State='Meghalaya', Population='null', AreaInSqKm='2964007', DensityPerSqKm='22429'}
+StateCensus{State='Manipur', Population='null', AreaInSqKm='2721756', DensityPerSqKm='22327'}
+StateCensus{State='Nagaland', Population='null', AreaInSqKm='1980602', DensityPerSqKm='16579'}
+StateCensus{State='Goa', Population='null', AreaInSqKm='1457723', DensityPerSqKm='3702'}
+StateCensus{State='Arunachal Pradesh', Population='null', AreaInSqKm='1382611', DensityPerSqKm='null'}
+StateCensus{State='Mizoram', Population='null', AreaInSqKm='1091014', DensityPerSqKm='21081'}
+StateCensus{State='Sikkim', Population='null', AreaInSqKm='607688', DensityPerSqKm='7096'}
+StateCensus{State='Rajasthan', Population='68621012', AreaInSqKm='342239', DensityPerSqKm='201'}
+StateCensus{State='Madhya Pradesh', Population='72597565', AreaInSqKm='308245', DensityPerSqKm='236'}
+StateCensus{State='Maharashta', Population='112372972', AreaInSqKm='307713', DensityPerSqKm='365'}
+StateCensus{State='Uttar Pradesh', Population='199812341', AreaInSqKm='240928', DensityPerSqKm='828'}
+StateCensus{State='Jammu and Kashmir', Population='12548926', AreaInSqKm='222236', DensityPerSqKm='57'}
 StateCensus{State='Gujarat', Population='60383628', AreaInSqKm='196024', DensityPerSqKm='308'}
-StateCensus{State='Telangana', Population='35286757', AreaInSqKm='114840', DensityPerSqKm='307'}
+StateCensus{State='Karnataka', Population='61130704', AreaInSqKm='191791', DensityPerSqKm='319'}
 StateCensus{State='Andhra Pradesh', Population='49386799', AreaInSqKm='162968', DensityPerSqKm='303'}
 StateCensus{State='Odisha', Population='41947358', AreaInSqKm='155707', DensityPerSqKm='269'}
-StateCensus{State='Madhya Pradesh', Population='72597565', AreaInSqKm='308245', DensityPerSqKm='236'}
-StateCensus{State='Rajasthan', Population='68621012', AreaInSqKm='342239', DensityPerSqKm='201'}
 StateCensus{State='Chattisgarh', Population='25540196', AreaInSqKm='135191', DensityPerSqKm='189'}
-StateCensus{State='Uttarakhand', Population='10116752', AreaInSqKm='53483', DensityPerSqKm='189'}
-StateCensus{State='Meghalaya', Population='2964007', AreaInSqKm='22429', DensityPerSqKm='132'}
+StateCensus{State='Tamil Nadu', Population='72138958', AreaInSqKm='130058', DensityPerSqKm='555'}
+StateCensus{State='Telangana', Population='35286757', AreaInSqKm='114840', DensityPerSqKm='307'}
+StateCensus{State='Bihar', Population='103804637', AreaInSqKm='94163', DensityPerSqKm='1102'}
+StateCensus{State='West Bengal', Population='91347736', AreaInSqKm='88752', DensityPerSqKm='1029'}
+StateCensus{State='Jharkhand', Population='32966238', AreaInSqKm='79714', DensityPerSqKm='414'}
+StateCensus{State='Assam', Population='31169272', AreaInSqKm='78438', DensityPerSqKm='397'}
 StateCensus{State='Himachal Pradesh', Population='6864602', AreaInSqKm='55673', DensityPerSqKm='123'}
+StateCensus{State='Uttarakhand', Population='10116752', AreaInSqKm='53483', DensityPerSqKm='189'}
+StateCensus{State='Punjab', Population='27704236', AreaInSqKm='50362', DensityPerSqKm='550'}
+StateCensus{State='Haryana', Population='25353081', AreaInSqKm='44212', DensityPerSqKm='573'}
+StateCensus{State='Kerala', Population='33387677', AreaInSqKm='38863', DensityPerSqKm='859'}
+StateCensus{State='Meghalaya', Population='2964007', AreaInSqKm='22429', DensityPerSqKm='132'}
 StateCensus{State='Manipur', Population='2721756', AreaInSqKm='22327', DensityPerSqKm='122'}
-StateCensus{State='Nagaland', Population='1980602', AreaInSqKm='16579', DensityPerSqKm='119'}
-StateCensus{State='Sikkim', Population='607688', AreaInSqKm='7096', DensityPerSqKm='86'}
-StateCensus{State='Jammu and Kashmir', Population='12548926', AreaInSqKm='222236', DensityPerSqKm='57'}
 StateCensus{State='Mizoram', Population='1091014', AreaInSqKm='21081', DensityPerSqKm='52'}
+StateCensus{State='Nagaland', Population='1980602', AreaInSqKm='16579', DensityPerSqKm='119'}
+StateCensus{State='Tripura', Population='3671032', AreaInSqKm='10486', DensityPerSqKm='350'}
+StateCensus{State='Sikkim', Population='607688', AreaInSqKm='7096', DensityPerSqKm='86'}
+StateCensus{State='Goa', Population='1457723', AreaInSqKm='3702', DensityPerSqKm='394'}
 StateCensus{State='Arunachal Pradesh', Population='1382611', AreaInSqKm='0', DensityPerSqKm='0'}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
