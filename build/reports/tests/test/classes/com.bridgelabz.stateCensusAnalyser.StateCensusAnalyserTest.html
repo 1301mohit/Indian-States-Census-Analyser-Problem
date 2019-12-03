@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">2</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.350s</div>
+<div class="counter">0.337s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">60%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,10 +61,148 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="readFile_IfCSVHeaderIncorrect_ReturnException"></a>
+<h3 class="failures">readFile_IfCSVHeaderIncorrect_ReturnException</h3>
+<span class="code">
+<pre>java.lang.NullPointerException
+	at com.statesCensusAnalyser.StateCensusAnalyser.lambda$sortByPopulation$0(StateCensusAnalyser.java:59)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1462)
+	at com.statesCensusAnalyser.StateCensusAnalyser.sortByPopulation(StateCensusAnalyser.java:60)
+	at com.statesCensusAnalyser.StateCensusAnalyser.readCsv(StateCensusAnalyser.java:23)
+	at com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest.readFile_IfCSVHeaderIncorrect_ReturnException(StateCensusAnalyserTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="readFile_IfDelimiterIncorrect_ReturnException"></a>
+<h3 class="failures">readFile_IfDelimiterIncorrect_ReturnException</h3>
+<span class="code">
+<pre>java.lang.NumberFormatException: For input string: &quot;103804637 94163&quot;
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.statesCensusAnalyser.StateCensusAnalyser.lambda$sortByPopulation$0(StateCensusAnalyser.java:59)
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:356)
+	at java.util.TimSort.sort(TimSort.java:220)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1462)
+	at com.statesCensusAnalyser.StateCensusAnalyser.sortByPopulation(StateCensusAnalyser.java:60)
+	at com.statesCensusAnalyser.StateCensusAnalyser.readCsv(StateCensusAnalyser.java:23)
+	at com.bridgelabz.stateCensusAnalyser.StateCensusAnalyserTest.readFile_IfDelimiterIncorrect_ReturnException(StateCensusAnalyserTest.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -75,23 +213,23 @@
 </tr>
 </thead>
 <tr>
-<td class="success">readFile_IfCSVHeaderIncorrect_ReturnException</td>
-<td class="success">0.029s</td>
-<td class="success">passed</td>
+<td class="failures">readFile_IfCSVHeaderIncorrect_ReturnException</td>
+<td class="failures">0.035s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">readFile_IfCorrect_ReturnHappy</td>
-<td class="success">0.222s</td>
+<td class="success">0.214s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">readFile_IfDelimiterIncorrect_ReturnException</td>
-<td class="success">0.062s</td>
-<td class="success">passed</td>
+<td class="failures">readFile_IfDelimiterIncorrect_ReturnException</td>
+<td class="failures">0.030s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">readFile_IfFileNameIncorrect_ReturnException</td>
-<td class="success">0.036s</td>
+<td class="success">0.057s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -101,6 +239,70 @@
 </tr>
 </table>
 </div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>StateCensus{State='Uttar Pradesh', Population='199812341', AreaInSqKm='240928', DensityPerSqKm='828'}
+StateCensus{State='Maharashta', Population='112372972', AreaInSqKm='307713', DensityPerSqKm='365'}
+StateCensus{State='Bihar', Population='103804637', AreaInSqKm='94163', DensityPerSqKm='1102'}
+StateCensus{State='West Bengal', Population='91347736', AreaInSqKm='88752', DensityPerSqKm='1029'}
+StateCensus{State='Madhya Pradesh', Population='72597565', AreaInSqKm='308245', DensityPerSqKm='236'}
+StateCensus{State='Tamil Nadu', Population='72138958', AreaInSqKm='130058', DensityPerSqKm='555'}
+StateCensus{State='Rajasthan', Population='68621012', AreaInSqKm='342239', DensityPerSqKm='201'}
+StateCensus{State='Karnataka', Population='61130704', AreaInSqKm='191791', DensityPerSqKm='319'}
+StateCensus{State='Gujarat', Population='60383628', AreaInSqKm='196024', DensityPerSqKm='308'}
+StateCensus{State='Andhra Pradesh', Population='49386799', AreaInSqKm='162968', DensityPerSqKm='303'}
+StateCensus{State='Odisha', Population='41947358', AreaInSqKm='155707', DensityPerSqKm='269'}
+StateCensus{State='Telangana', Population='35286757', AreaInSqKm='114840', DensityPerSqKm='307'}
+StateCensus{State='Kerala', Population='33387677', AreaInSqKm='38863', DensityPerSqKm='859'}
+StateCensus{State='Jharkhand', Population='32966238', AreaInSqKm='79714', DensityPerSqKm='414'}
+StateCensus{State='Assam', Population='31169272', AreaInSqKm='78438', DensityPerSqKm='397'}
+StateCensus{State='Punjab', Population='27704236', AreaInSqKm='50362', DensityPerSqKm='550'}
+StateCensus{State='Chattisgarh', Population='25540196', AreaInSqKm='135191', DensityPerSqKm='189'}
+StateCensus{State='Haryana', Population='25353081', AreaInSqKm='44212', DensityPerSqKm='573'}
+StateCensus{State='Jammu and Kashmir', Population='12548926', AreaInSqKm='222236', DensityPerSqKm='57'}
+StateCensus{State='Uttarakhand', Population='10116752', AreaInSqKm='53483', DensityPerSqKm='189'}
+StateCensus{State='Himachal Pradesh', Population='6864602', AreaInSqKm='55673', DensityPerSqKm='123'}
+StateCensus{State='Tripura', Population='3671032', AreaInSqKm='10486', DensityPerSqKm='350'}
+StateCensus{State='Meghalaya', Population='2964007', AreaInSqKm='22429', DensityPerSqKm='132'}
+StateCensus{State='Manipur', Population='2721756', AreaInSqKm='22327', DensityPerSqKm='122'}
+StateCensus{State='Nagaland', Population='1980602', AreaInSqKm='16579', DensityPerSqKm='119'}
+StateCensus{State='Goa', Population='1457723', AreaInSqKm='3702', DensityPerSqKm='394'}
+StateCensus{State='Arunachal Pradesh', Population='1382611', AreaInSqKm='0', DensityPerSqKm='0'}
+StateCensus{State='Mizoram', Population='1091014', AreaInSqKm='21081', DensityPerSqKm='52'}
+StateCensus{State='Sikkim', Population='607688', AreaInSqKm='7096', DensityPerSqKm='86'}
+StateCensus{State='Uttar Pradesh', Population='199812341', AreaInSqKm='240928', DensityPerSqKm='828'}
+StateCensus{State='Maharashta', Population='112372972', AreaInSqKm='307713', DensityPerSqKm='365'}
+StateCensus{State='Bihar', Population='103804637', AreaInSqKm='94163', DensityPerSqKm='1102'}
+StateCensus{State='West Bengal', Population='91347736', AreaInSqKm='88752', DensityPerSqKm='1029'}
+StateCensus{State='Madhya Pradesh', Population='72597565', AreaInSqKm='308245', DensityPerSqKm='236'}
+StateCensus{State='Tamil Nadu', Population='72138958', AreaInSqKm='130058', DensityPerSqKm='555'}
+StateCensus{State='Rajasthan', Population='68621012', AreaInSqKm='342239', DensityPerSqKm='201'}
+StateCensus{State='Karnataka', Population='61130704', AreaInSqKm='191791', DensityPerSqKm='319'}
+StateCensus{State='Gujarat', Population='60383628', AreaInSqKm='196024', DensityPerSqKm='308'}
+StateCensus{State='Andhra Pradesh', Population='49386799', AreaInSqKm='162968', DensityPerSqKm='303'}
+StateCensus{State='Odisha', Population='41947358', AreaInSqKm='155707', DensityPerSqKm='269'}
+StateCensus{State='Telangana', Population='35286757', AreaInSqKm='114840', DensityPerSqKm='307'}
+StateCensus{State='Kerala', Population='33387677', AreaInSqKm='38863', DensityPerSqKm='859'}
+StateCensus{State='Jharkhand', Population='32966238', AreaInSqKm='79714', DensityPerSqKm='414'}
+StateCensus{State='Assam', Population='31169272', AreaInSqKm='78438', DensityPerSqKm='397'}
+StateCensus{State='Punjab', Population='27704236', AreaInSqKm='50362', DensityPerSqKm='550'}
+StateCensus{State='Chattisgarh', Population='25540196', AreaInSqKm='135191', DensityPerSqKm='189'}
+StateCensus{State='Haryana', Population='25353081', AreaInSqKm='44212', DensityPerSqKm='573'}
+StateCensus{State='Jammu and Kashmir', Population='12548926', AreaInSqKm='222236', DensityPerSqKm='57'}
+StateCensus{State='Uttarakhand', Population='10116752', AreaInSqKm='53483', DensityPerSqKm='189'}
+StateCensus{State='Himachal Pradesh', Population='6864602', AreaInSqKm='55673', DensityPerSqKm='123'}
+StateCensus{State='Tripura', Population='3671032', AreaInSqKm='10486', DensityPerSqKm='350'}
+StateCensus{State='Meghalaya', Population='2964007', AreaInSqKm='22429', DensityPerSqKm='132'}
+StateCensus{State='Manipur', Population='2721756', AreaInSqKm='22327', DensityPerSqKm='122'}
+StateCensus{State='Nagaland', Population='1980602', AreaInSqKm='16579', DensityPerSqKm='119'}
+StateCensus{State='Goa', Population='1457723', AreaInSqKm='3702', DensityPerSqKm='394'}
+StateCensus{State='Arunachal Pradesh', Population='1382611', AreaInSqKm='0', DensityPerSqKm='0'}
+StateCensus{State='Mizoram', Population='1091014', AreaInSqKm='21081', DensityPerSqKm='52'}
+StateCensus{State='Sikkim', Population='607688', AreaInSqKm='7096', DensityPerSqKm='86'}
+</pre>
+</span>
+</div>
 </div>
 <div id="footer">
 <p>
@@ -109,7 +311,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.2.1</a> at Dec 3, 2019 5:52:49 PM</p>
+<a href="http://www.gradle.org">Gradle 5.2.1</a> at Dec 3, 2019 7:29:02 PM</p>
 </div>
 </div>
 </body>

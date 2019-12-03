@@ -24,7 +24,8 @@ public class StateCensusAnalyserTest {
     public void readFile_IfFileNameIncorrect_ReturnException() {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
-            stateCensusAnalyser.readCsv("/home/mohit/Indian-States-Census-Analyser-Problem/src/main/resources/StateCensusData.csv", StateCensus.class);
+            String result = stateCensusAnalyser.readCsv("/home/mohit/Indian-States-Census-Analyser-Problem/src/main/resources/StateCensusData.csv", StateCensus.class);
+            Assert.assertEquals("HAPPY", result);
         } catch (StateCensusAnalyserException e) {
             Assert.assertEquals(StateCensusAnalyserException.ExceptionType.NO_SUCH_FILE, e.type);
         }
@@ -34,7 +35,8 @@ public class StateCensusAnalyserTest {
     public void readFile_IfFileTypeIncorrect_ReturnException() {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
-            stateCensusAnalyser.readCsv("/home/mohit/Indian-States-Census-Analyser-Problem/src/main/resources/StateCensusData.txt", StateCensus.class);
+            String result = stateCensusAnalyser.readCsv("/home/mohit/Indian-States-Census-Analyser-Problem/src/main/resources/StateCensusData.txt", StateCensus.class);
+            Assert.assertEquals("HAPPY", result);
         } catch (StateCensusAnalyserException e) {
             Assert.assertEquals(StateCensusAnalyserException.ExceptionType.NO_SUCH_FILE, e.type);
         }
@@ -44,7 +46,8 @@ public class StateCensusAnalyserTest {
     public void readFile_IfDelimiterIncorrect_ReturnException() {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
-            stateCensusAnalyser.readCsv("/home/mohit/Indian-States-Census-Analyser-Problem/src/main/resources/StateCensusDataDelimiterIncorrect.csv", StateCensus.class);
+            String result = stateCensusAnalyser.readCsv("/home/mohit/Indian-States-Census-Analyser-Problem/src/main/resources/StateCensusDataDelimiterIncorrect.csv", StateCensus.class);
+            Assert.assertEquals("HAPPY", result);
         } catch (StateCensusAnalyserException e) {
             Assert.assertEquals(StateCensusAnalyserException.ExceptionType.NO_SUCH_FILE, e.type);
         }
@@ -54,7 +57,8 @@ public class StateCensusAnalyserTest {
     public void readFile_IfCSVHeaderIncorrect_ReturnException() {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
         try {
-            stateCensusAnalyser.readCsv("/home/mohit/Indian-States-Census-Analyser-Problem/src/main/resources/StateCensusDataCSVHeaderIncorrect.csv", StateCensus.class);
+            String result = stateCensusAnalyser.readCsv("/home/mohit/Indian-States-Census-Analyser-Problem/src/main/resources/StateCensusDataCSVHeaderIncorrect.csv", StateCensus.class);
+            Assert.assertEquals("HAPPY", result);
         } catch (StateCensusAnalyserException e) {
             Assert.assertEquals(StateCensusAnalyserException.ExceptionType.NO_SUCH_FILE, e.type);
         }

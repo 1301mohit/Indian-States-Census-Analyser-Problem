@@ -20,7 +20,7 @@ public class StateCensusAnalyser {
 
     public static String readCsv(String stateCensusData, Class className) throws StateCensusAnalyserException {
         List stateCensusLists = builder(stateCensusData, className);
-        stateCensusLists.sort(Comparator.comparing(StateCensus::getState));
+        sortByPopulation(stateCensusLists);
         Gson gson = new Gson();
         String json = gson.toJson(stateCensusLists);
         try {
@@ -48,6 +48,19 @@ public class StateCensusAnalyser {
             return stateCensusList;
         } catch (IOException e) {
             throw new StateCensusAnalyserException("SAD", StateCensusAnalyserException.ExceptionType.NO_SUCH_FILE);
+        }
+    }
+
+    private static void sortByState(List stateCensusLists) {
+        stateCensusLists.sort(Comparator.comparing(StateCensus::getState));
+    }
+
+    private static void sortByPopulation(List stateCensusLists) {
+        Comparator<StateCensus> c = (s2,s1) -> (Integer.parseInt(s1.getPopulation().trim())) - (Integer.parseInt(s2.getPopulation().trim()));
+        stateCensusLists.sort(c);
+        for (Object obj: stateCensusLists
+        ) {
+            System.out.println(obj);
         }
     }
 }
