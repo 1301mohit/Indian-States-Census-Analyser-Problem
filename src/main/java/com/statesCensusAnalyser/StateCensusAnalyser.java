@@ -7,6 +7,7 @@ import com.opencsv.bean.CsvToBeanBuilder;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
+import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
@@ -21,11 +22,7 @@ public class StateCensusAnalyser {
 
     public static String readCsv(String stateCensusData, Class className) throws StateCensusAnalyserException {
         List stateCensusLists = builder(stateCensusData, className);
-        sort((ArrayList)stateCensusLists);
-        for (Object obj: stateCensusLists
-             ) {
-            System.out.println(obj);
-        }
+        sortByArea((ArrayList)stateCensusLists);
         Gson gson = new Gson();
         String json = gson.toJson(stateCensusLists);
         try {
@@ -76,9 +73,23 @@ public class StateCensusAnalyser {
         }
     }
 
-    private static void sortByArea(List stateCensusLists) {
-          Comparator<StateCensus> c = (s1,s2) -> s2.getAreaInSqKm().compareTo(s1.getAreaInSqKm());
-          stateCensusLists.sort(c);
+    private static void sortByArea(ArrayList<StateCensus> stateCensusLists) {
+        StateCensus temp = null;
+        int length = stateCensusLists.size();
+        for(int i=0; i<length-1; i++) {
+            for(int j=0; j<length-i-1; j++) {
+                if(stateCensusLists.get(j).getAreaInSqKm().compareTo(stateCensusLists.get(j+1).getAreaInSqKm()) > 0) {
+                    temp = stateCensusLists.get(j);
+                    stateCensusLists.set(j, stateCensusLists.get(j + 1));
+                    stateCensusLists.set(j, temp);
+                }
+            }
+        }
+        for (Object obj: stateCensusLists) {
+            System.out.println(obj);
+        }
+//          Comparator<StateCensus> c = (s1,s2) -> s2.getAreaInSqKm().compareTo(s1.getAreaInSqKm());
+//          stateCensusLists.sort(c);
     }
 
     private static void sortByPopulationDensity(List stateCensusLists) {
