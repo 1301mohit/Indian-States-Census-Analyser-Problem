@@ -5,7 +5,7 @@ public class StateCensusAnalyserException extends Exception {
     public ExceptionType type;
 
     public enum ExceptionType {
-        NO_SUCH_FILE
+        NO_SUCH_FILE, NO_SUCH_METHOD
     }
 
     public StateCensusAnalyserException(String message) {

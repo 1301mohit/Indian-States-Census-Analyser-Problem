@@ -7,24 +7,40 @@ import com.opencsv.bean.CsvToBeanBuilder;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
-import java.lang.reflect.Array;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 import java.util.*;
 
-public class StateCensusAnalyser {
+public class StateCensusAnalyser<T extends Comparable<T>> {
     private static final String STATE_CENSUS_DATA = "StateCensusData1.csv";
 
-    List<StateCensus> stateCensusLists = new ArrayList();
+    List<StateCensus> stateCensusList = new ArrayList();
 
     private int count = 0;
 
-    public static String readCsv(String stateCensusData, Class className) throws StateCensusAnalyserException {
+    public List<StateCensus> readCsv(String stateCensusData, Class className, String methodName) throws StateCensusAnalyserException, IllegalAccessException, InvocationTargetException {
         List stateCensusLists = builder(stateCensusData, className);
-        sortByArea((ArrayList)stateCensusLists);
+        if(methodName != "") {
+            try {
+                stateCensusList = sort(stateCensusLists, methodName);
+            } catch (NoSuchMethodException e) {
+                throw new StateCensusAnalyserException("Method is not present", StateCensusAnalyserException.ExceptionType.NO_SUCH_METHOD);
+            }
+            writeInJson(stateCensusList);
+            return stateCensusList;
+        }
+        else {
+            writeInJson(stateCensusLists);
+            return stateCensusLists;
+        }
+    }
+
+    private void writeInJson(List list) throws StateCensusAnalyserException {
         Gson gson = new Gson();
-        String json = gson.toJson(stateCensusLists);
+        String json = gson.toJson(list);
         try {
             FileWriter writer = new FileWriter("/home/mohit/Indian-States-Census-Analyser-Problem/src/main/resources/StateCensusData.json");
             writer.write(json);
@@ -32,10 +48,6 @@ public class StateCensusAnalyser {
         } catch (IOException e) {
             throw new StateCensusAnalyserException("SAD", StateCensusAnalyserException.ExceptionType.NO_SUCH_FILE);
         }
-        if (stateCensusLists.size() == 29)
-            return "HAPPY";
-        else
-            return "SAD";
     }
 
     private static <T> List<T> builder(String stateCensusData, T className) throws StateCensusAnalyserException {
@@ -59,51 +71,33 @@ public class StateCensusAnalyser {
         }
     }
 
-    private static void sort(ArrayList<StateCensus> stateCensusLists) {
+    private List<StateCensus> sort(List<StateCensus> stateCensusLists, String methodName) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         StateCensus temp = null;
         int length = stateCensusLists.size();
         for(int i=0; i<length-1; i++) {
             for(int j=0; j<length-i-1; j++) {
-                if(stateCensusLists.get(j).getPopulation().compareTo(stateCensusLists.get(j+1).getPopulation()) > 0) {
-                    temp = stateCensusLists.get(j);
-                    stateCensusLists.set(j, stateCensusLists.get(j + 1));
-                    stateCensusLists.set(j, temp);
+                Class cls1 = stateCensusLists.get(j).getClass();
+                Method method1 = cls1.getDeclaredMethod(methodName);
+                String value1 = (String)method1.invoke(stateCensusLists.get(j));
+                Class cls2 = stateCensusLists.get(j+1).getClass();
+                Method method2 = cls2.getDeclaredMethod(methodName);
+                String value2 = (String)method2.invoke(stateCensusLists.get(j+1));
+                if(methodName.equals("getState")) {
+                    if(value1.compareTo(value2) > 0) {
+                        temp = stateCensusLists.get(j);
+                        stateCensusLists.set(j, stateCensusLists.get(j + 1));
+                        stateCensusLists.set(j+1, temp);
+                    }
+                }
+                else{
+                    if(Integer.parseInt(value1) < Integer.parseInt(value2)) {
+                        temp = stateCensusLists.get(j);
+                        stateCensusLists.set(j, stateCensusLists.get(j + 1));
+                        stateCensusLists.set(j+1, temp);
+                    }
                 }
             }
         }
+        return stateCensusLists;
     }
-
-    private static void sortByArea(ArrayList<StateCensus> stateCensusLists) {
-        StateCensus temp = null;
-        int length = stateCensusLists.size();
-        for(int i=0; i<length-1; i++) {
-            for(int j=0; j<length-i-1; j++) {
-                if(stateCensusLists.get(j).getAreaInSqKm().compareTo(stateCensusLists.get(j+1).getAreaInSqKm()) > 0) {
-                    temp = stateCensusLists.get(j);
-                    stateCensusLists.set(j, stateCensusLists.get(j + 1));
-                    stateCensusLists.set(j, temp);
-                }
-            }
-        }
-        for (Object obj: stateCensusLists) {
-            System.out.println(obj);
-        }
-//          Comparator<StateCensus> c = (s1,s2) -> s2.getAreaInSqKm().compareTo(s1.getAreaInSqKm());
-//          stateCensusLists.sort(c);
-    }
-
-    private static void sortByPopulationDensity(List stateCensusLists) {
-        Comparator<StateCensus> c = (s1,s2) -> s2.getAreaInSqKm().compareTo(s1.getAreaInSqKm());
-        stateCensusLists.sort(c);
-    }
-
-    private static void sortByState(List stateCensusLists) {
-        stateCensusLists.sort(Comparator.comparing(StateCensus::getState));
-    }
-
-    private static void sortByPopulation(List stateCensusLists) {
-        Comparator<StateCensus> c = (s1,s2) -> s2.getPopulation().compareTo(s1.getPopulation());
-        stateCensusLists.sort(c);
-    }
-
 }
